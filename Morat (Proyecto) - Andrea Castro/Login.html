@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login - Morat</title>
+        <link rel="icon" type="image/x-icon" href="Imagenes/Icono.ico">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/1d3890a423.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="contenedorLogin">
+        <div class="containerl">
+            <img src="/Imagenes/logo-pelicula.png" class="imgLS">
+            <h2 class="titl">Inicia Sesión a tu Cuenta</h2>
+            <form>
+               <div class="em">
+                  <input class="bor" type="text" id="email" name="email" placeholder="Email" required/>
+               </div>
+               <div class="pas">
+                  <input class="bor" type="password" id="Password" name="Password" placeholder="Password" required/>
+                  <i class="passw fa-solid fa-eye" id="eye"></i>
+               </div>
+               <div id="contenedor-error"></div>
+               <button class="bor" type="submit" title="Noticias">Login</button>
+               <h2 class="titl">¿No tienes una cuenta? Sign Up</h2>
+               <a href="SignUp.html"><button class="bor2" type="button" title="Inicio"> Sign Up </button></a>
+               
+               <!--Modal de usuario logueado-->
+               <div id="modalLoggedIn" class="modal">
+                  <div class="modal-content">
+                      <h2 class="er">¡BIENVENIDO!</h2>
+                      <p class="ex">Tu sesión se ha iniciado de manera Correcta</p>
+                      <button class="close-button" type="button" id="logoutBtnC"><i class="fa-solid fa-check"></i> Listo</button>
+                  </div> 
+               </div>
+                
+                <!-- Modal Error-->
+               <div id="modalError" class="modal">
+                  <div class="modal-content">
+                      <h2 class="er">¡ERROR!</h2>
+                      <p class="ex">Usuario o Contraseña Incorrecta</p>
+                      <button class="close-button" type="button" id="logoutBtnE"><i class="fa-solid fa-xmark"></i> Cerrar</button>
+                   </div>
+               </div>
+            </form>
+        </div>
+        <a href="Inicio.html"><button class="bors" id="modal-btn" type="button" title="Inicio"><i class="fa-solid fa-door-open"></i> Salir </button></a>
+    </div>
+    </body>
+    <script>
+        //Muestra modal al usuario loggeado
+        const loggedInModal = document.getElementById('modalLoggedIn');
+        const loggedInContent = loggedInModal.querySelector('.modal-content');
+        const logoutButton = loggedInModal.querySelector('#logoutBtnC');
+
+        loggedInModal.addEventListener('click', () => {
+            loggedInModal.style.display = 'none';
+        });
+
+        loggedInContent.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+
+        logoutButton.addEventListener('click', () => {
+            //No mostrar modales
+            loggedInModal.style.display = 'none';
+            document.getElementById('modalError').style.display = 'none';
+
+            //Borrar el token
+            localStorage.removeItem('toke');
+
+            //A Login
+            window.location.href = '/listado.html';
+        });
+
+        /* División */
+        //Muestra modal de usuario o contraseña incorrecta
+        const errorModal = document.getElementById('modalError');
+        const errorContent = errorModal.querySelector('.modal-content');
+        const closeButton = errorModal.querySelector('#logoutBtnE'); 
+
+        errorModal.addEventListener('click', () => {
+            errorModal.style.display = 'none';
+        });
+
+        errorContent.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+
+        closeButton.addEventListener('click', () => {
+            errorModal.style.display = 'none';
+        });
+
+        /* Validación de Mostrar Contraseña */
+        const eye = document.getElementById('eye');
+        const password = document.getElementById('Password');
+
+        eye.addEventListener('click', function() {
+            if (password.type === 'password') {
+            password.type = 'text';
+            eye.classList.toggle('active');
+            } else {
+            password.type = 'password';
+             eye.classList.toggle('active');
+            }
+        });
+
+        const form = document.querySelector('form');
+        const emailInput = document.querySelector('#email');
+        const passwordInput = document.querySelector('#Password');
+        const contenedorError = document.querySelector('#contenedor-error');
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            const email = emailInput.value;
+            const password = passwordInput.value;
+
+            fetch('http://127.0.0.1:3001/login', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                    'Access-Control-Allow-Origin':'*',
+                    'Access-Control-Allow-Credentials': 'true',
+                    'Access-Control-Allow-Methods': 'POST,PATCH,OPTIONS',
+                    "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-Width",
+                },
+                body: JSON.stringify({email, password})
+            }).then(response => {
+                if(!response.ok){
+                    throw new Error('La respuesta no fue correcta');
+                }
+                return response.json();
+            }).then(data => {
+                console.log(data.token);
+                localStorage.setItem('token',data.token);
+                document.getElementById('modalLoggedIn').style.display = 'block'; //Modal inicio
+                //window.location.href = '/listado.html';
+            }).catch(error => {
+                console.log('Error: ', error);
+                form.reset(); // limpiar los campos del formulario
+                contenedorError.textContent = 'Asegurate de tu Usuario o Contraseña';
+                document.getElementById('modalError').style.display = 'block'; //Modal Error
+                setTimeout(() => {
+                    contenedorError.textContent = ''; //Quita el mensaje después de 5 segundos
+                }, 6000); //Cambia la duracion del mensaje
+                //contenedorError.textContent = 'Usuario o Contraseña Incorrecta';
+            });
+        });
+    </script>
+</html>

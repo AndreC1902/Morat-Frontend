@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música - Morat</title>
+    <link rel="icon" type="image/x-icon" href="Imagenes/Icono.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/1d3890a423.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./javascript/Musica.js"></script>
+</head>
+<body>
+  <header role="banner">
+    <div class="Principal">
+      <div class="containerL">
+      <a href="Inicio.html" class="item">Inicio</a>
+      <a href="Musica.html" class="item active">Música</a>
+      <a href="Videos.html" class="item">Vídeos</a>
+      <a href="Lyrics.html" class="item">Lyrics</a>
+      </div>
+      <div class="img"><a href="Inicio.html"><img class="img" src="Imagenes/logo-pelicula.png"></a></div>
+      <div class="containerR">
+      <a href="Galeria.html" class="item">Galería</a>
+      <a href="BandaBios.html" class="item">Banda</a>
+      <a href="Eventos.html" class="item">Eventos</a>
+      <a href="Noticias.html" class="item">Noticias</a>
+      </div>
+    </div>
+  </header>
+  <div class="contenedor-flex">
+    <div class="heroM"></div>
+      <div class="conteM">
+        <h2 class="item1M">Música</h2>
+        <p class="item3M">
+          <a class="btnMusica" href="#section2">
+            <i class="fa-sharp fa-solid fa-circle-down"></i>
+            &nbsp; Ver Música
+          </a>
+        </p>
+      </div>
+  </div>
+  <div class="containerM" id="section2">
+    <hr class="hr-line">
+    <div class="containerAl">
+      <div class="rowM">
+        <div class="columnAr">
+            <article class="album">
+              <div class="cardAlbum">
+                <div class="itemA">
+                  <img src="./Imagenes/Albums/Album1.jpg" alt="Album1" class="ImagenA">
+                </div>
+                <div class="cardBody">
+                  <p class="cardTitle">GRABADO EN MADERA<br>2015</p>
+                  <hr>
+                  <a class="btn btnCanciones" href="#popup-article">
+                    <i class="fa-solid fa-music"></i>
+                    &nbsp; Canciones
+                  </a>
+                  <!-- Inicio de Popup -->
+                  <div id="popup-article" class="popup">
+                    <div class="popup__container">
+                      <a href="#section2" class="popup__close">
+                      <span class="screen-reader"></span>
+                      </a>  
+                      <div class="popup__content">
+                        <div class="containerPL">
+                          <img src="./Imagenes/Albums/Album1.jpg" alt="Album1" class="ImagenAP">
+                        </div>
+                        <div class="containerPR">
+                          <h1 class="popup__title r-title">Grabado en Madera</h1>
+                          <h2>- Fecha de Lanzamiento: 23 Julio del 2015</h2>
+                          <hr class="hr-lineP">
+                          <table class="tracklist">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Titulo</th>
+                                <th>Duracion</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1 <button class="play-btn" data-src="./Canciones/Grabado en Madera/Morat - Cuánto Me Duele (Versión Acústica).mp3"><i class="fa-solid fa-play"></i></button>
+                                      <button class="pause-btn" style="display: none;" data-track="1"><i class="fa-solid fa-pause"></i></button>
+                                </td>
+                                <td>Cuánto Me Duele (Versión Acústica)</td>
+                                <td>3:51</td>
+                              </tr>
+                              <tr>
+                                <td>2 <button class="play-btn" data-src="./Canciones/Grabado en Madera/Morat - Di Que No Te Vas (Versión Acústica).mp3"><i class="fa-solid fa-play"></i></button>
+                                      <button class="pause-btn" style="display: none;" data-track="2"><i class="fa-solid fa-pause"></i></button>
+                                </td>
+                                <td>Di Que No Te Vas (Versión Acústica)</td>
+                                <td>4:03</td>
+                              </tr>
+                              <tr>
+                                <td>3 <button class="play-btn" data-src="./Canciones/Grabado en Madera/Morat - Una Vez Más (Versión Acústica).mp3"><i class="fa-solid fa-play"></i></button>
+                                      <button class="pause-btn" style="display: none;" data-track="3"><i class="fa-solid fa-pause"></i></button>
+                                </td>
+                                <td>Una Vez Más (Versión Acústica)</td>
+                                <td>4:02</td>
+                              </tr>
+                              <tr>
+                                <td>4 <button class="play-btn" data-src="./Canciones/Grabado en Madera/Morat - En Un Sólo Dia (Versión Acústica).mp3"><i class="fa-solid fa-play"></i></button>
+                                      <button class="pause-btn" style="display: none;" data-track="4"><i class="fa-solid fa-pause"></i></button>
+                                </td>
+                                <td>En Un Sólo Día (Versión Acústica)</td>
+                                <td>3:22</td>
+                              </tr>
+                              <!-- ... -->
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Fin de Popup -->
+                </div>
+              </div>
+            </article>
+        </div>
+        <div class="columnAr">
+          <article class="album">
+            <div class="cardAlbum">
+              <div class="itemA">
+                <img src="./Imagenes/Albums/Album2.jpeg" alt="Album2" class="ImagenA">
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">SOBRE EL AMOR Y LOS EFECTOS SECUNDARIOS<br>2016</p>
+                <hr>
+                <a class="btn btnCanciones" href="#popup-article2">
+                  <i class="fa-solid fa-music"></i>
+                  &nbsp; Canciones
+                </a>
+                <!-- Inicio de Popup -->
+                <div id="popup-article2" class="popup">
+                  <div class="popup__container">
+                    <a href="#section2" class="popup__close">
+                    <span class="screen-reader"></span>
+                    </a>  
+                    <div class="popup__content">
+                      <div class="containerPL">
+                        <img src="./Imagenes/Albums/Album2.jpeg" alt="Album2" class="ImagenAP">
+                      </div>
+                      <div class="containerPR">
+                        <h1 class="popup__title r-title">Sobre el Amor y los Efectos Secundarios</h1>
+                        <h2>- Fecha de Lanzamiento: 16 Junio del 2016</h2>
+                        <hr class="hr-lineP">
+                        <table class="tracklist">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>Titulo</th>
+                              <th>Duracion</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1 <button class="play-btn" data-src="./Canciones/Sobre El Amor y Sus Efectos Secundarios/Morat - Mi Nuevo Vicio.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="1"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Mi Nuevo Vicio</td>
+                              <td>3:57</td>
+                            </tr>
+                            <tr>
+                              <td>2 <button class="play-btn" data-src="./Canciones/Sobre El Amor y Sus Efectos Secundarios/Morat - En Un Sólo Dia.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="2"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>En Un Sólo Día</td>
+                              <td>3:27</td>
+                            </tr>
+                            <tr>
+                              <td>3 <button class="play-btn" data-src="./Canciones/Sobre El Amor y Sus Efectos Secundarios/Morat - Aprender A Quererte.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="3"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Aprender a Quererte</td>
+                              <td>3:49</td>
+                            </tr>
+                            <tr>
+                              <td>4 <button class="play-btn" data-src="./Canciones/Sobre El Amor y Sus Efectos Secundarios/Morat - Yo Más Te Adoro.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="4"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Yo Más Te Adoro</td>
+                              <td>3:22</td>
+                            </tr>
+                            <tr>
+                              <td>5 <button class="play-btn" data-src="./Canciones/Sobre El Amor y Sus Efectos Secundarios/Morat - Di Que No Te Vas.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="5"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Di Que No Te Vas</td>
+                              <td>4:03</td>
+                            </tr>
+                            <tr>
+                              <td>6 <button class="play-btn" data-src="./Canciones/Sobre El Amor y Sus Efectos Secundarios/Morat - Cómo Te Atreves.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="6"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Cómo Te Atreves</td>
+                              <td>3:59</td>
+                            </tr>
+                            <tr>
+                              <td>7 <button class="play-btn" data-src="./Canciones/Sobre El Amor y Sus Efectos Secundarios/Morat - Una Vez Más.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="7"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Una Vez Más</td>
+                              <td>4:01</td>
+                            </tr>
+                            <tr>
+                              <td>8 <button class="play-btn" data-src="./Canciones/Sobre El Amor y Sus Efectos Secundarios/Morat - Mil Tormentas.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="8"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Mil Tormentas</td>
+                              <td>3:53</td>
+                            </tr>
+                            <tr>
+                              <td>9 <button class="play-btn" data-src="./Canciones/Sobre El Amor y Sus Efectos Secundarios/Morat - Ahora Que No Puedo Hablar.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="9"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Ahora Que No Puedo Hablar</td>
+                              <td>4:24</td>
+                            </tr>
+                            <tr>
+                              <td>10 <button class="play-btn" data-src="./Canciones/Sobre El Amor y Sus Efectos Secundarios/Morat - Cuánto Me Duele.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="10"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Cúanto Me Duele</td>
+                              <td>3:49</td>
+                            </tr>
+                            <tr>
+                              <td>11 <button class="play-btn" data-src="./Canciones/Sobre El Amor y Sus Efectos Secundarios/Morat - Ya No Estás Tú.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="11"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Ya No Estás Tú</td>
+                              <td>3:19</td>
+                            </tr>
+                            <!-- ... -->
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fin de Popup -->
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="columnAr">
+          <article class="album">
+            <div class="cardAlbum">
+              <div class="itemA">
+                <img src="./Imagenes/Albums/Album3.jpeg" alt="Album3" class="ImagenA">
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">BALAS PERDIDAS<br>2018</p>
+                <hr>
+                <a class="btn btnCanciones" href="#popup-article3">
+                  <i class="fa-solid fa-music"></i>
+                  &nbsp; Canciones
+                </a>
+                <!-- Inicio de Popup -->
+                <div id="popup-article3" class="popup">
+                  <div class="popup__container">
+                    <a href="#section2" class="popup__close">
+                    <span class="screen-reader"></span>
+                    </a>  
+                    <div class="popup__content">
+                      <div class="containerPL">
+                        <img src="./Imagenes/Albums/Album3.jpeg" alt="Album3" class="ImagenAP">
+                      </div>
+                      <div class="containerPR">
+                        <h1 class="popup__title r-title">Balas Perdidas</h1>
+                        <h2>- Fecha de Lanzamiento: 23 Octubre del 2018</h2>
+                        <hr class="hr-lineP">
+                        <table class="tracklist">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>Titulo</th>
+                              <th>Duracion</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1 <button class="play-btn" data-src="./Canciones/Balas Perdidas/Morat - Otras Se Pierden.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="1"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Otras Se Pierden</td>
+                              <td>3:54</td>
+                            </tr>
+                            <tr>
+                              <td>2 <button class="play-btn" data-src="./Canciones/Balas Perdidas/Morat - Acuérdate De Mí.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="2"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Acuérdate De Mí</td>
+                              <td>3:41</td>
+                            </tr>
+                            <tr>
+                              <td>3 <button class="play-btn" data-src="./Canciones/Balas Perdidas/Morat - Besos En Guerra.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="3"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Besos En Guerra</td>
+                              <td>3:49</td>
+                            </tr>
+                            <tr>
+                              <td>4 <button class="play-btn" data-src="./Canciones/Balas Perdidas/Morat - Cuando El Amor Se Escapa.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="4"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Cuando El Amor Se Escapa</td>
+                              <td>2:57</td>
+                            </tr>
+                            <tr>
+                              <td>5 <button class="play-btn" data-src="./Canciones/Balas Perdidas/Morat - No Se Va.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="5"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>No Se Va</td>
+                              <td>3:36</td>
+                            </tr>
+                            <tr>
+                              <td>6 <button class="play-btn" data-src="./Canciones/Balas Perdidas/Morat - Mi Vida Entera.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="6"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Mi Vida Entera</td>
+                              <td>3:34</td>
+                            </tr>
+                            <tr>
+                              <td>7 <button class="play-btn" data-src="./Canciones/Balas Perdidas/Morat - El Embrujo.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="7"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>El Embrujo</td>
+                              <td>3:58</td>
+                            </tr>
+                            <tr>
+                              <td>8 <button class="play-btn" data-src="./Canciones/Balas Perdidas/Morat - Yo No Merezco Volver.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="8"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Yo No Merezco Volver</td>
+                              <td>3:40</td>
+                            </tr>
+                            <tr>
+                              <td>9 <button class="play-btn" data-src="./Canciones/Balas Perdidas/Morat - Maldita Costumbre.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="9"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Maldita Costumbre</td>
+                              <td>2:46</td>
+                            </tr>
+                            <tr>
+                              <td>10 <button class="play-btn" data-src="./Canciones/Balas Perdidas/Morat - Cuando Nadie Ve.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="10"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Cuando Nadie Ve</td>
+                              <td>3:39</td>
+                            </tr>
+                            <tr>
+                              <td>11 <button class="play-btn" data-src="./Canciones/Balas Perdidas/Morat - Punto Y Aparte.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="11"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Punto Y Aparte</td>
+                              <td>3:31</td>
+                            </tr>
+                            <tr>
+                              <td>12 <button class="play-btn" data-src="./Canciones/Balas Perdidas/Morat - 11 Besos.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="12"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>11 Besos</td>
+                              <td>1:58</td>
+                            </tr>
+                            <!-- ... -->
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fin de Popup -->
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="containerAl">
+      <div class="rowM">
+        <div class="columnAb">
+          <article class="album">
+            <div class="cardAlbum">
+              <div class="itemA">
+                <img src="./Imagenes/Albums/Album5.jpeg" alt="Album4" class="ImagenA">
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">¿A DÓNDE VAMOS?<br>2021</p>
+                <hr>
+                <a class="btn btnCanciones" href="#popup-article4">
+                  <i class="fa-solid fa-music"></i>
+                  &nbsp; Canciones
+                </a>
+                <!-- Inicio de Popup -->
+                <div id="popup-article4" class="popup">
+                  <div class="popup__container">
+                    <a href="#section2" class="popup__close">
+                    <span class="screen-reader"></span>
+                    </a>  
+                    <div class="popup__content">
+                      <div class="containerPL">
+                        <img src="./Imagenes/Albums/Album5.jpeg" alt="Album4" class="ImagenAP">
+                      </div>
+                      <div class="containerPR">
+                        <h1 class="popup__title r-title">¿A Dónde Vamos?</h1>
+                        <h2>- Fecha de Lanzamiento: 14 Julio del 2021</h2>
+                        <hr class="hr-lineP">
+                        <table class="tracklist">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>Titulo</th>
+                              <th>Duracion</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1 <button class="play-btn" data-src="./Canciones/A Donde Vamos/Morat - A Dónde Vamos.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="1"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>A Dónde Vamos</td>
+                              <td>3:23</td>
+                            </tr>
+                            <tr>
+                              <td>2 <button class="play-btn" data-src="./Canciones/A Donde Vamos/Morat - No Termino.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="2"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>No Termino</td>
+                              <td>3:59</td>
+                            </tr>
+                            <tr>
+                              <td>3 <button class="play-btn" data-src="./Canciones/A Donde Vamos/Morat - En Coma.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="3"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>En Coma</td>
+                              <td>3:23</td>
+                            </tr>
+                            <tr>
+                              <td>4 <button class="play-btn" data-src="./Canciones/A Donde Vamos/Morat - Al Aire.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="4"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Al Aire</td>
+                              <td>2:49</td>
+                            </tr>
+                            <tr>
+                              <td>5 <button class="play-btn" data-src="./Canciones/A Donde Vamos/Morat - De Cero.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="5"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>De Cero</td>
+                              <td>3:06</td>
+                            </tr>
+                            <tr>
+                              <td>6 <button class="play-btn" data-src="./Canciones/A Donde Vamos/Morat - Primeras Veces.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="6"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Primeras Veces</td>
+                              <td>3:12</td>
+                            </tr>
+                            <tr>
+                              <td>7 <button class="play-btn" data-src="./Canciones/A Donde Vamos/Morat - No Hay Más Que Hablar.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="7"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>No Hay Más Que Hablar</td>
+                              <td>3:31</td>
+                            </tr>
+                            <tr>
+                              <td>8 <button class="play-btn" data-src="./Canciones/A Donde Vamos/Morat - Enamórate De Alguien Más.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="8"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Enamórate De Alguien Más</td>
+                              <td>3:49</td>
+                            </tr>
+                            <tr>
+                              <td>9 <button class="play-btn" data-src="./Canciones/A Donde Vamos/Morat - Date La Vuelta.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="9"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Date La Vuelta</td>
+                              <td>3:17</td>
+                            </tr>
+                            <tr>
+                              <td>10 <button class="play-btn" data-src="./Canciones/A Donde Vamos/Morat - Idiota.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="10"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Idiota</td>
+                              <td>3:04</td>
+                            </tr>
+                            <tr>
+                              <td>11 <button class="play-btn" data-src="./Canciones/A Donde Vamos/Morat - Bajo La Mesa.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="11"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Bajo La Mesa</td>
+                              <td>2:37</td>
+                            </tr>
+                            <tr>
+                              <td>12 <button class="play-btn" data-src="./Canciones/A Donde Vamos/Morat - Nunca Te Olvidé.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="12"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Nunca Te Olvidé</td>
+                              <td>3:31</td>
+                            </tr>
+                            <tr>
+                              <td>13 <button class="play-btn" data-src="./Canciones/A Donde Vamos/Morat - Mi Pesadilla.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="13"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Mi Pesadilla</td>
+                              <td>3:25</td>
+                            </tr>
+                            <tr>
+                              <td>14 <button class="play-btn" data-src="./Canciones/A Donde Vamos/Morat - Simplemente Pasan.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="14"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Simplemente Pasan</td>
+                              <td>3:01</td>
+                            </tr>
+                            <!-- ... -->
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fin de Popup -->
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="columnAb">
+          <article class="album">
+            <div class="cardAlbum">
+              <div class="itemA">
+                <img src="./Imagenes/Albums/Album4.jpeg" alt="Album5" class="ImagenA">
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">SI AYER FUERA HOY<br>2022</p>
+                <hr>
+                <a class="btn btnCanciones" href="#popup-article5">
+                  <i class="fa-solid fa-music"></i>
+                  &nbsp; Canciones
+                </a>
+                <!-- Inicio de Popup -->
+                <div id="popup-article5" class="popup">
+                  <div class="popup__container">
+                    <a href="#section2" class="popup__close">
+                    <span class="screen-reader"></span>
+                    </a>  
+                    <div class="popup__content">
+                      <div class="containerPL">
+                        <img src="./Imagenes/Albums/Album4.jpeg" alt="Album5" class="ImagenAP">
+                      </div>
+                      <div class="containerPR">
+                        <h1 class="popup__title r-title">Si Ayer Fuera Hoy</h1>
+                        <h2>- Fecha de Lanzamiento: 4 Noviembre del 2022</h2>
+                        <hr class="hr-lineP">
+                        <table class="tracklist">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>Titulo</th>
+                              <th>Duracion</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1 <button class="play-btn" data-src="./Canciones/Si Ayer fuera Hoy/Morat - Llamada Perdida.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="1"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Llamada Perdida</td>
+                              <td>2:45</td>
+                            </tr>
+                            <tr>
+                              <td>2 <button class="play-btn" data-src="./Canciones/Si Ayer fuera Hoy/Morat - Segundos Platos.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="2"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Segundos Platos</td>
+                              <td>3:04</td>
+                            </tr>
+                            <tr>
+                              <td>3 <button class="play-btn" data-src="./Canciones/Si Ayer fuera Hoy/Morat - Salir Con Vida.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="3"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Salir Con Vida</td>
+                              <td>2:56</td>
+                            </tr>
+                            <tr>
+                              <td>4 <button class="play-btn" data-src="./Canciones/Si Ayer fuera Hoy/Morat - Debí Suponerlo.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="4"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Debí Suponerlo</td>
+                              <td>2:24</td>
+                            </tr>
+                            <tr>
+                              <td>5 <button class="play-btn" data-src="./Canciones/Si Ayer fuera Hoy/Morat - 506.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="5"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>506</td>
+                              <td>3:00</td>
+                            </tr>
+                            <tr>
+                              <td>6 <button class="play-btn" data-src="./Canciones/Si Ayer fuera Hoy/Morat - Santa Fe.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="6"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Santa Fe</td>
+                              <td>2:46</td>
+                            </tr>
+                            <tr>
+                              <td>7 <button class="play-btn" data-src="./Canciones/Si Ayer fuera Hoy/Morat - Nunca Al Revés.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="7"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Nunca Al Revés</td>
+                              <td>3:01</td>
+                            </tr>
+                            <tr>
+                              <td>8 <button class="play-btn" data-src="./Canciones/Si Ayer fuera Hoy/Morat - Si La Ves.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="8"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Si La Ves</td>
+                              <td>3:48</td>
+                            </tr>
+                            <tr>
+                              <td>9 <button class="play-btn" data-src="./Canciones/Si Ayer fuera Hoy/Morat - Las Cometas Siempre Vuelan En Agosto.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="9"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Las Cometas Siempre Vuelan En Agosto</td>
+                              <td>3:38</td>
+                            </tr>
+                            <tr>
+                              <td>10 <button class="play-btn" data-src="./Canciones/Si Ayer fuera Hoy/Morat - Valen Más.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="10"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>Valen Más</td>
+                              <td>3:08</td>
+                            </tr>
+                            <tr>
+                              <td>11 <button class="play-btn" data-src="./Canciones/Si Ayer fuera Hoy/Morat - París.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="11"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>París</td>
+                              <td>3:02</td>
+                            </tr>
+                            <tr>
+                              <td>12 <button class="play-btn" data-src="./Canciones/Si Ayer fuera Hoy/Morat - _ u _ s _ _ A _ _ j _.mp3"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pause-btn" style="display: none;" data-track="12"><i class="fa-solid fa-pause"></i></button>
+                              </td>
+                              <td>_ u _ s _ _ A _ _ j _</td>
+                              <td>0:13</td>
+                            </tr>
+                            <!-- ... -->
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fin de Popup -->
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-line">
+    <blockquote class="citaM" cite="Morat">La música es un lenguaje universal que nos permite conectarnos con 
+      las emociones más profundas, y para nosotros, como músicos, poder transmitir esas emociones 
+      y sentimientos a través de nuestra música es una de las cosas más gratificantes que podemos hacer.</blockquote>
+  </div>
+  <footer>
+    <!-- Footer Redes Sociales -->
+      <section class="ft-social">
+      <ul class="ft-social-list">
+        <li><a href="https://www.instagram.com/morat/" target="_blank"><i class="fa-brands fa-instagram"></i>
+          &nbsp;Instagram </a></li>
+        <li><a href="https://www.facebook.com/moratoficial" target="_blank"><i class="fa-brands fa-facebook"></i>
+          &nbsp;Facebook </a></li>
+        <li><a href="https://twitter.com/MoratBanda" target="_blank"><i class="fa-brands fa-twitter"></i>
+          &nbsp;Twitter </a></li>
+        <li><a href="https://www.youtube.com/@MoratOficial" target="_blank"><i class="fa-brands fa-youtube"></i>
+          &nbsp;YouTube </a></li>
+      </ul>
+    </section>
+      
+    <!-- Footer Derechos de Autor -->
+      <section class="ft-legal">
+      <ul class="ft-legal-list">
+        <li>&copy; 2023 | Andrea Castro | Programación Web II</li>
+      </ul>
+      </section>
+  </footer>
+</body>
+</html>

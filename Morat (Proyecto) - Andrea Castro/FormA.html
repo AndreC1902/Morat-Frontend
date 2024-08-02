@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Noticias - Morat</title>
+        <link rel="icon" type="image/x-icon" href="Imagenes/Icono.ico">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/1d3890a423.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="ContenedorTodo">
+            <div class="ContenedorImagen"></div>
+            <div class="containerForm">
+                <h2 class="tituloForm">Agregar Noticia</h2>
+                <form enctype="multipart/form-data" id="form-container" class="form-container">
+                    <div class="left-column">
+                        <div>
+                            <label class="TitleF" for="Imagen">Seleccione una imagen:</label>
+                            <input class="ImageF" type="file" id="Imagen" name="Imagen" accept=".jpeg, .png, .jpg" required/>
+                        </div>
+                        <div>
+                          <label class="TitleF" for="Titulo">Titulo:</label>
+                          <input class="ContentF" type="text" id="Titulo" name="Titulo" required/>
+                        </div>
+                        <div>
+                          <label class="TitleF" for="FechaPublicacion">Fecha Publicación:</label>
+                          <input class="ContentF" type="date" id="FechaPublicacion" name="FechaPublicacion" required/>
+                        </div>
+                        <div>
+                          <label class="TitleF" for="Contenido">Contenido:</label>
+                          <input class="ContentF" type="text" id="Contenido" name="Contenido" required/>
+                        </div>
+                      </div>
+                      <div class="right-column">
+                        <div>
+                          <label class="TitleF" for="Autor">Autor:</label>
+                          <input class="ContentF" type="text" id="Autor" name="Autor" required/>
+                        </div>
+                        <div>
+                          <label class="TitleF" for="Categoria">Categoría:</label>
+                          <input class="ContentF" type="text" id="Categoria" name="Categoria" required/>
+                        </div>
+                        <div>
+                          <label class="TitleF" for="Etiquetas">Etiquetas:</label>
+                          <input class="ContentF" type="text" id="Etiquetas" name="Etiquetas" required/>
+                        </div>
+                    </div>
+                    <div id="error-container"></div>
+                   <button class="buttonF" type="submit"> Agregar </button></a>
+                </form>
+            </div>
+            <a href="Listado.html"><button class="bors" id="modal-btn" type="button" title="Salir"><i class="fa-solid fa-door-open"></i> Salir </button></a>
+        </div>
+    </body>
+        <script src="/javascript/Agregar.js"></script>
+</html>
