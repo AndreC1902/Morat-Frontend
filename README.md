@@ -1,4 +1,4 @@
 # Herramientas Utilizadas
-- HTML
-- CSS
-- JAVASCRIPT
+- Html
+- Css
+- Javascript
